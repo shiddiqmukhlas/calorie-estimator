@@ -1,0 +1,24 @@
+# Python virtual environment
+env/
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# macOS
+.DS_Store
+
+# Xcode
+DerivedData/
+.build/
+
+# AI / ML Models
+*.pt
+*.pth
+*.onnx
+*.pkl
