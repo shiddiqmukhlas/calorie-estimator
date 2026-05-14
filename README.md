@@ -4,7 +4,7 @@ A computer vision system that estimates the **calorie content of Indonesian food
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Build With
 
 **iOS Client**
 
