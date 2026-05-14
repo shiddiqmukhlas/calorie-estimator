@@ -178,8 +178,7 @@ Body: file=<image.jpg>
    }
    ```
    > This is the **only file** you need to edit when the server URL changes.
-3. Set your **Team** in Signing & Capabilities
-4. Run on a **physical iPhone** (camera + network required)
+3. Run on a **physical iPhone** (camera + network required)
 
 ---
 
