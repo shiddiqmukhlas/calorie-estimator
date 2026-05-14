@@ -74,8 +74,8 @@ CalorieEstimator/
 │   │   ├── ml_models/
 │   │   │   ├── yolov8_model.py       # YOLOv8 segmentation inference
 │   │   │   ├── midas_model.py        # MiDaS depth estimation
-│   │   │   ├── random_forest.py      # Weight prediction model
-│   │   │   ├── yolov8m-seg.pt        # Trained YOLOv8 weights
+│   │   │   ├── random_forest.py      # Weight prediction
+│   │   │   ├── yolov8m-seg.pt        # Trained YOLOv8 model
 │   │   │   └── rf_model_v2.pkl       # Trained Random Forest model
 │   │   └── utils/
 │   ├── midas_model.pth        # MiDaS pretrained weights
@@ -83,6 +83,7 @@ CalorieEstimator/
 │
 ├── ios-app/                   # Swift / SwiftUI iOS client
 │   └── CalorieEstimator/
+│       ├── Config.swift               # ⚙️ Backend URL config (edit this)
 │       ├── ContentView.swift          # Main UI + API call logic
 │       ├── DetectionOverlay.swift     # Draws bounding boxes + calorie labels
 │       ├── CameraViewController.swift # Live camera capture
@@ -170,10 +171,13 @@ Body: file=<image.jpg>
 ## 📱 iOS App Setup
 
 1. Open `ios-app/CalorieEstimator.xcodeproj` in **Xcode 15+**
-2. In `ContentView.swift`, update the backend URL:
+2. Open **`Config.swift`** and set your backend URL:
    ```swift
-   let url = URL(string: "https://<your-ngrok-url>/calorie_estimation")!
+   enum Config {
+       static let baseURL = "https://your-ngrok-url.ngrok-free.app"
+   }
    ```
+   > This is the **only file** you need to edit when the server URL changes.
 3. Set your **Team** in Signing & Capabilities
 4. Run on a **physical iPhone** (camera + network required)
 
@@ -226,6 +230,7 @@ The training notebook is in `ml-training/Estimasi_Kalori.ipynb`. It covers:
 
 ---
 
-## 📄 License
+## 📄 Author
 
-This project is for academic and research purposes.
+M. Shiddiq Mukhlas
+LinkedIn: https://www.linkedin.com/in/shiddiqmukhlas/

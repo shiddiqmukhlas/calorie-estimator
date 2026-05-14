@@ -124,7 +124,7 @@ struct ContentView: View {
             isLoading = true  // Mulai loading
         }
 
-        let url = URL(string: "https://e3b95f39c59b.ngrok-free.app/calorie_estimation")! // Ganti sesuai backend
+        let url = URL(string: "\(Config.baseURL)/calorie_estimation")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         
